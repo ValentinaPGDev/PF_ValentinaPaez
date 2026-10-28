@@ -1,0 +1,109 @@
+/*colores del sitio*/
+:root {
+    --color-primario: #7231a4;
+    --color-oscuro: #400b54;
+    --color-fondo: #f4f7fc;
+    --color-texto: #392847;
+    --color-blanco: #ffffff;
+}
+
+/*Encabezados y navegacion*/
+.site-header {
+    background-color: var(--color-oscuro);
+}
+
+.navbar-brand {
+    letter-spacing: 0.5px;
+}
+/*Estilos generales*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-blanco);
+    line-height: 1.6;
+}
+
+/*Seccion de bienvenida*/
+.hero {
+    background-color: var(--color-fondo);
+}
+
+.hero h1 {
+    color: var(--color-oscuro);
+}
+
+.hero h2 {
+    color: var(--color-oscuro);
+}
+
+
+.hero p {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*botones*/
+.btn-primary {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+.btn-primary:hover {
+    background-color: #6e247d;
+    border-color: #61247d;
+}
+
+/*galeria*/
+.galeria {
+      display: grid;
+      /* Define exactamente 3 columnas paralelas de igual tamaño */
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .galeria__figura {
+      margin: 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .galeria__img {
+      width: 100%;
+      /* Altura fija para que todas las columnas mantengan simetría vertical */
+      height: 400px; 
+      object-fit: cover;
+      display: block;
+    }
+    .galeria__leyenda {
+      padding: 12px;
+      font-size: 1rem;
+      text-align: center;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Adaptabilidad de la galeria para pantallas pequeñas (móviles) */
+    @media (max-width: 768px) {
+      .galeria {
+        grid-template-columns: 1fr;
+      }
+      .galeria__img {
+        height: 300px;
+      }
+    }
+
+.contact-section {
+    background-color: var(--color-fondo);
+}
+
+.campos{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
