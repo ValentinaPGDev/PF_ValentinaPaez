@@ -37,4 +37,6 @@ document.getElementById('mensajeUsuarioForm').addEventListener('submit', async f
     contenedor.innerHTML = '<h3>Comentarios:</h3><ul>' +
         comentarios.map(c => `<li><strong>${c.nombre}:</strong> ${c.mensaje}</li>`).join('') +
         '</ul>';
+    // Opcional: limpiar el formulario
+    this.reset();
 });
