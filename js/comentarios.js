@@ -34,10 +34,8 @@ app.post('/mensajeUsuario', (req, res) => {
         mensaje: mensajeUsuario
     });
 
-    res.send(`
-        <h2>Comentario guardado</h2>
-        <a href="/verComentarios">Ver todos los comentarios</a>
-    `);
+    // Devuelve todos los comentarios en JSON
+    res.json(req.session.comentarios);
 });
 
 // Ruta para ver los comentarios guardados en la sesión
